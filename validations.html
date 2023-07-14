@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      div {
+        margin: 5px;
+        padding: 0 10px;
+      }
+      .input {
+        width: 250px;
+        padding: 6px;
+      }
+      .label {
+        margin: 0 5px;
+        display: block;
+      }
+      .btn {
+        margin: 0 120px;
+        padding: 5px;
+        cursor: pointer;
+        background-color: aliceblue;
+      }
+      .btn:hover {
+        color: red;
+      }
+      span {
+        color: red;
+        position: relative;
+        bottom: 10px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h5 class="text-center">Javasript form validation:</h5>
+    <div class="container">
+      <form class="form" action="#" onsubmit="return validations()">
+        <div>
+          <label class="label" for="username">Username:</label>
+          <input type="text" class="input" id="username" />
+          <span id="userErr"></span>
+        </div>
+        <div>
+          <label class="label" for="email">Email:</label>
+          <input type="text" class="input" id="email" />
+          <span id="emailErr"></span>
+        </div>
+        <div>
+          <label class="label" for="password">Password:</label>
+          <input type="text" class="input" id="password" />
+          <span id="passwordErr"></span>
+        </div>
+        <div>
+          <label class="label" for="confirmPassword">Confirmpassword:</label>
+          <input class="input" type="password" id="confirmPass" />
+          <span id="confirmpassErr"></span>
+        </div>
+        <input type="submit" class="btn" value="Submit" />
+      </form>
+    </div>
+    
+    <script>
+      function validations() {
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let confirmPass = document.getElementById("confirmPass").value;
+        let date = document.getElementById("username").value;
+        let regName = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (username == "") {
+          document.getElementById("userErr").innerHTML =
+            "**Username should not be blank";
+            return false;
+        }
+        if(username.length<=4||username.length>20){
+          document.getElementById("userErr").innerHTML ="**Username Length Should be greater than 4 and less than 20";
+          return false;
+        }
+        if(!isNaN(username)) {
+          document.getElementById("userErr").innerHTML ="**username must be a character";
+          return false;
+        }
+        if (password == "") {
+          document.getElementById("passwordErr").innerHTML =
+            "**Password should not be blank";
+            return false;
+        }
+        if(password.length<=4||password.length==8){
+          document.getElementById("passwordErr").innerHTML ="**password Length Should be greater than 4 and less than 8";
+          return false;
+        }
+        if (password == confirmPass) {
+          document.getElementById("confirmpassErr").innerHTML =
+            "**Password and confirmPassword must be same";
+            return false;
+        }       
+         if (email == "") {
+          document.getElementById("emailErr").innerHTML =
+            "**Please Enter Valid Details in email field";
+            return false
+        } 
+        //shubhada@gmail.com (total length-4) and shubhada.in (total length - 3)
+        if(email.charAt(email.length-4)!='.'&& email.charAt(email.length-3)!='.'){
+          document.getElementById("emailErr").innerHTML =
+            "**Please Enter Valid Details in email field";
+            return false
+        }
+        if (password == "") {
+          document.getElementById("password1").innerHTML =
+            "**Please Enter Valid Details in email field";
+            return false;
+        } 
+        if (password != confirmPass) {
+          document.getElementById("confirmpass1").innerHTML =
+            "**Please Enter Valid Details in email field";
+            return false;
+        }
+      }
+    </script>
+  </body>
+</html>
