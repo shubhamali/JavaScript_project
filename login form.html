@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Login & Signup Form</title>
+</head>
+<body>
+   <section class="wrapper">
+     <div class="form_signup">
+        <header>Signup</header>
+        <form name="signup_form" action="#" onsubmit="storeData()">
+            <input type="text" placeholder="Full Name" id="fName" autocomplete="off" required/>
+            <input type="email" placeholder="Email address" id="email" autocomplete="off" required/>
+            <input type="password" placeholder="Password" id="password" autocomplete="off" required/>
+            <div class="checkbox">
+            <input type="checkbox" id="signupCheck"/>
+            <label>I accept all terms & conditions</label>
+            </div>
+            <input type="submit" value="Signup"/>
+        </form>
+     </div>
+     <div class="login_div">
+         <div class="form_login">
+            <header>Login</header>
+            <form name="_form" action="#" onsubmit="checkData()">
+                <input type="email" placeholder="Email address" id="emailCheck" required/>
+                <input type="password" placeholder="Password" id="passwordCheck" required/>
+                <a href="#">Forgot password?</a>
+                <input type="submit" value="Login" />
+            </form>
+         </div>
+     </div>
+   </section>
+   <script src="login form.js"></script>
+</body>
+</html>
