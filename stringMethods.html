@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //length -property;
+        var user="Amazon";
+        document.write(user.length+"<br>");
+
+        //methods-toUpperCase() used to convert into all into capital letter;
+         document.write(user.toUpperCase()+"<br/>");
+
+         //toLowerCase() used to convert into small letters;
+         var company="ANORA";
+         document.write(company.toLowerCase()+"</br>")
+
+         //charAt() - to find letter at specific index value;
+         document.write(user.charAt(1)+"<br>")   //Answer-m
+
+         //trim()-removes white space from string;
+         var msg="   I am writing string methods  :";
+         document.write(msg.trim()+"<br>");
+
+         //replace() - replaces specified value with new value[it replaces only first match from string];
+         var string="Hello developer";
+         document.write(string.replace("Hello","Hi")+"<br>") //case sensitive
+         //to replace globally-string.replace("/Hello/g","Hi");
+         // case insensitive-string.replace("/Hello/gi","Hi");
+
+         //slice(start index,end index)-extra given part from string;
+         //include strating index,exclude end index;
+          var userName="YashTech";
+          document.write(userName.slice(0,2)+"<br>");          //answer-Ya
+          document.write(userName.slice(1)+"<br>");           //answer-ashTech
+          document.write(userName.slice(-1)+"<br>")         //-1 count from end of string;
+
+          //includes() check whether the value present or not in given string;
+          var userName="YashTech";
+          document.write(userName.includes("T")+"<br>");    //answer-true
+ 
+
+          //search()-returns index number of given value;
+          var userName="YashTech";
+          document.write(userName.search("T")+"<br>");    //answer-4
+          document.write(userName.search("u")+"<br>");    //answer-[-1]
+
+          //indexOf()-return index value of first matching element from given string;
+          var userName="what are you doing? It's not that much simple";
+          document.write(userName.indexOf("are")+"<br>");    //answer-5;
+          document.write(userName.indexOf("a",7)+"<br>");    //here it will return index number and start searching "a" after 7 index;
+    </script>
+</body>
+</html>

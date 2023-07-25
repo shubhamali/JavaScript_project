@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //accessing Array;
+        var user=["sachin","harshu","tanvi","suresh"];
+        document.write(user+"<br/>");
+        document.write(user[1]+"<br/>");
+        document.write(user.length+"<br/>");
+        user[4]="payal";
+        delete user[2];
+        document.write(user[4]+"<br/>");
+        document.write(user+"<br/>");
+        
+        //for creating new Array;
+        var city=[];
+        // var city=new Array[];
+        city[0]="pune";
+        city[1]="mumbai";
+        city[2]="sangli";
+        city[3]="kolhapur";
+        document.write(city+"<br/>")
+
+        //object 
+        const person={
+            firstName:"Shubhada",
+            lastName:"Mali",
+            age:25,
+            call:function(){
+             document.write("Hello this is method:")
+            }
+        }
+        document.write(person.call()); 
+
+        //while accessing object value always access by its objectname,can use function inside object ;
+        const employee={};
+        //const employee=new Object();
+        employee.name="Akshay";
+        employee.city="Pune";
+        document.write(employee.name);
+        //for deleting object property;
+        delete employee.city;
+        //Add new property;
+        employee.age=25;
+        
+    </script>
+</body>
+</html>
