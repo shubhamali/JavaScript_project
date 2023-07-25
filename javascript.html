@@ -8,60 +8,60 @@
 <body>
     <script>
         //Simple String;
-        // var name="Shubhada";
-        // for(let i=0;i<name.length;i++){
-        //     document.write(name[i]+"<br/>");
-        // }
+        var name="Shubhada";
+        for(let i=0;i<name.length;i++){
+            document.write(name[i]+"<br/>");
+        }
 
         //String reverse;
-        // var city="Sangli";
-        // for(let i=[city.length-1];i>=0;i--){
-        //     document.write(city[i]+"<br/>")
-        // }
+        var city="Sangli";
+        for(let i=[city.length-1];i>=0;i--){
+            document.write(city[i]+"<br/>")
+        }
 
         //Factorial number;
-        // var num=prompt("enter any number:");
-        // var fact=1;
-        // for(let i=1;i<=num;i++){
-        //     fact=fact*i;
-        // }
-        // document.write(fact);
+        var num=prompt("enter any number:");
+        var fact=1;
+        for(let i=1;i<=num;i++){
+            fact=fact*i;
+        }
+        document.write(fact);
 
         //Swapping of two numbers with third variable;
-        // var num1=prompt("Enter num1:");
-        // var num2=prompt("Enter num2:");
-        // var tempVariable;
-        // tempVariable=num1;
-        // num1=num2;
-        // num2=tempVariable;
-        // document.write("num1 is:"+num1+"<br/>"+"num2 is:"+num2);
+        var num1=prompt("Enter num1:");
+        var num2=prompt("Enter num2:");
+        var tempVariable;
+        tempVariable=num1;
+        num1=num2;
+        num2=tempVariable;
+        document.write("num1 is:"+num1+"<br/>"+"num2 is:"+num2);
 
         //Swapping of two numbers without third variable;
-        // var a=parseInt(prompt("enter a:"));
-        // var b=parseInt(prompt("enter b:"));
-        // a=a+b;
-        // b=a-b;
-        // a=a-b;
-        // document.write("value of a is:"+a+"<br/>"+"value of b is:"+b);
+        var a=parseInt(prompt("enter a:"));
+        var b=parseInt(prompt("enter b:"));
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        document.write("value of a is:"+a+"<br/>"+"value of b is:"+b);
 
         //make first letter of string capital;
-        // var name1="suyash";
-        // var firstLetter=name1.charAt(0);
-        // var capLetter=firstLetter.toUpperCase();
-        // var getValue=name1.slice(1);
-        // document.write(capLetter+getValue);
+        var name1="suyash";
+        var firstLetter=name1.charAt(0);
+        var capLetter=firstLetter.toUpperCase();
+        var getValue=name1.slice(1);
+        document.write(capLetter+getValue);
 
         //Fibbonaci series 0,1,1,2,3,5.......
-        // var n=prompt("enter any number:");
-        // var a=0;
-        // var b=1;
-        // document.write(a,b,)
-        // for(let i=0;i<=n;i++){
-        //     document.write(c);
-        //     c=a+b;
-        //     a=b;
-        //     b=c;
-        // }
+        var n=prompt("enter any number:");
+        var a=0;
+        var b=1;
+        document.write(a,b,)
+        for(let i=0;i<=n;i++){
+            document.write(c);
+            c=a+b;
+            a=b;
+            b=c;
+        }
 
         //whether the string is palindrome or not:
         var str=prompt("enter string:");
@@ -70,8 +70,8 @@
         var msg="the string is a palindrome:"
         for(let i=0;i<loop;i++){
             if(str[i]!=str[len-1-i]){
-                var msg="the string is not a palindrome:";
-        }
+            var msg="the string is not a palindrome:";
+            }
         }
         document.write(msg);
 
